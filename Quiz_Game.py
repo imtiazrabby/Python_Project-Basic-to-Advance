@@ -2,42 +2,42 @@ print("Welcome to my Computer  Quiz!")
 
 playing = input("Do you want to play? ")
 
-if playing !="yes":
+if playing.lower() !="yes":
     quit()
 
 
 print("Okay! Let's Play :) ")
 answer = input ("What does CPU Stand for? ")
 
-if answer == "Central Processing Unit" :
+if answer.lower() == "Central Processing Unit" :
     print ("Correct!")
 else:
     print("Incorrect!")
 
 answer = input ("What does GPU Stand for? ")
 
-if answer == "Graphics Processing Unit" :
+if answer.lower() == "Graphics Processing Unit" :
     print ("Correct!")
 else:
     print("Incorrect!")
 
 answer = input ("What does RAM Stand for? ")
 
-if answer == "Random Access Memory" :
+if answer.lower() == "Random Access Memory" :
     print ("Correct!")
 else:
     print("Incorrect!")
 
 answer = input ("What does ROM Stand for? ")
 
-if answer == "Read-Only Memory" :
+if answer.lower() == "Read-Only Memory" :
     print ("Correct!")
 else:
     print("Incorrect!")
 
 answer = input ("What does PSU Stand for? ")
 
-if answer == "Power Supply" :
+if answer.lower() == "Power Supply" :
     print ("Correct!")
 else:
     print("Incorrect!")
@@ -45,14 +45,14 @@ else:
 
 answer = input ("What does CSE Stand for? ")
 
-if answer == "Computer Science and Engineering" :
+if answer.lower() == "Computer Science and Engineering" :
     print ("Correct!")
 else:
     print("Incorrect!")
 
 answer = input ("What does ICT Stand for? ")
 
-if answer == "Information and Communication Technology" :
+if answer.lower() == "Information and Communication Technology" :
     print ("Correct!")
 else:
     print("Incorrect!")
