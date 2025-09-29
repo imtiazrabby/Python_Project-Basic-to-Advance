@@ -10,4 +10,6 @@ answer = input ("What does CPU Stand for? ")
 
 if answer == "Central Processing Unit" :
     print ("Correct!")
+else:
+    print("Incorrect!")
 
