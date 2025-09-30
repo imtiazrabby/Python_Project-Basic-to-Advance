@@ -1,36 +1,28 @@
 import random
 
-user_wins = 0
-computer_wins = 0
+options = ("rock", "paper", "scissors")
+winning = ("scissors", "rock", "paper")
+running = True
 
-options = ["rock", "paper", "scissors"]  # lowercase for consistency
+while running:
 
-while True:
-    user_input = input("Type Rock/Paper/Scissors or Q to quit: ").lower()
-    
-    if user_input == "q":
-        break
+    player = None
+    computer = random.choice(options)
 
-    if user_input not in options:
-        print("Invalid input. Try again!")
-        continue
+    while player not in options:
+        player = input("Enter a choice (rock, paper, scissors): ").lower()
 
-    random_number = random.randint(0, 2)
-    computer_pick = options[random_number]
-    print("Computer picked", computer_pick + ".")
+    print(f"Player: {player}")
+    print(f"Computer: {computer}")
 
-    if user_input == computer_pick:
+    if player == computer:
         print("It's a tie!")
-
-    elif (user_input == "rock" and computer_pick == "scissors") or \
-         (user_input == "paper" and computer_pick == "rock") or \
-         (user_input == "scissors" and computer_pick == "paper"):
-        print("You won!")
-        user_wins += 1
+    elif options.index(player) == winning.index(computer):
+        print("You win !")
     else:
-        print("You lost!")
-        computer_wins += 1
+        print("You lose!")
 
-print("You won", user_wins, "times.")
-print("The computer won", computer_wins, "times.")
-print("Goodbye!")
+    if not input("Play again? (yes/no): ").lower() == "yes":
+        running = False
+
+print("Thanks for playing!")
